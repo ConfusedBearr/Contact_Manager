@@ -1,0 +1,34 @@
+create database ContactManager;
+use ContactManager;
+
+CREATE TABLE `ContactManager`.`Users`
+(
+`ID` INT NOT NULL AUTO_INCREMENT ,
+`DateCreated` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+`DateLastLoggedIn` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+`FirstName` VARCHAR(50) NOT NULL DEFAULT '' ,
+`LastName` VARCHAR(50) NOT NULL DEFAULT '' ,
+`Login` VARCHAR(50) NOT NULL DEFAULT '' ,
+`Password` VARCHAR(50) NOT NULL DEFAULT '' ,
+PRIMARY KEY (`ID`)
+) ENGINE = InnoDB;
+
+
+CREATE TABLE `ContactManager`.`Contacts`
+(
+`ID` INT NOT NULL AUTO_INCREMENT ,
+`Name` VARCHAR(50) NOT NULL DEFAULT '' ,
+`Phone` VARCHAR(50) NOT NULL DEFAULT '' ,
+`Email` VARCHAR(50) NOT NULL DEFAULT '' ,
+`UserID` INT NOT NULL DEFAULT '0' ,
+PRIMARY KEY (`ID`)
+) ENGINE = InnoDB;
+
+insert into Users (FirstName,LastName,Login,Password) VALUES
+('John','Guy','JohnG','Guy');
+insert into Users (FirstName,LastName,Login,Password) VALUES
+('Dummy','Account','Test','Guy');
+
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Bobby','(555)-444-6666','BobbyisGreat@Gmail.com',1);
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Jacky','(123)-896-1122','IdontLikeBobby@Gmail.com',1);
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('nobody','(774)-0092-4572','YouShouldntSeeMe@Gmail.com',2);
