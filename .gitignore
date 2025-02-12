@@ -1,0 +1,65 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor files
+*.swp
+*.swo
+*.bak
+*.log
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore vendor dependencies (if using Composer)
+/vendor/
+/composer.lock
+
+# Ignore environment and configuration files
+.env
+.env.*
+config.php
+config/*.php
+settings.php
+
+# Ignore database dumps and local databases
+*.sql
+*.sqlite
+*.sqlite3
+db/*.sql
+db/*.sqlite
+db/*.sqlite3
+
+# Ignore Apache and server logs
+logs/
+*.log
+error_log
+
+# Ignore session and cache files
+sessions/
+cache/
+/tmp/
+
+# Ignore uploads and user-generated content
+uploads/
+public/uploads/
+public/files/
+
+# Ignore node_modules if using Node.js for frontend assets
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore built assets
+/public/dist/
+/public/build/
+
+# Ignore compiled files
+*.o
+*.out
+*.so
+
+# Ignore Python virtual environment (if using Flask or other tools alongside PHP)
+venv/
+__pycache__/
