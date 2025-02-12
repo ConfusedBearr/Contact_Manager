@@ -7,7 +7,8 @@ body
 {
     font-size: 40px;
     width: 100%;
-    margin: 2% 5%;
+    margin: auto;
+    padding: 10;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     color: #FFFFFF;
@@ -17,7 +18,16 @@ body
 {
     font-size: 30px;
     width: 70%;
-    margin-left: 15%;
+    margin: auto;
+    padding: 25px;
+    background-color: #b2b2b2;
+}
+
+#signUp
+{ 
+    font-size: 30px;
+    width: 70%;
+    margin: auto;
     padding: 25px;
     background-color: #b2b2b2;
 }

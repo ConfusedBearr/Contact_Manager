@@ -6,20 +6,15 @@
 	$id = 0;
 	$firstName = "";
 	$lastName = "";
-
-	$login = $inData["login"];
-	$pwd = $inData["password"];
-	
-
-	$conn = new mysqli("localhost", "GenAccess", "GenAccess", "ContactManager"); 	
+	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331"); 	
 	if( $conn->connect_error )
 	{
 		returnWithError( $conn->connect_error );
 	}
 	else
 	{
-		$stmt = $conn->prepare("SELECT * FROM Users WHERE Login=? AND Password =?");
-		$stmt->bind_param("ss", $login, $pwd);
+		$stmt = $conn->prepare("SELECT ID,firstName,lastName FROM Users WHERE Login=? AND Password =?");
+		$stmt->bind_param("ss", $inData["login"], $inData["password"]);
 		$stmt->execute();
 		$result = $stmt->get_result();
 
