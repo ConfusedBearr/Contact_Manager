@@ -32,3 +32,8 @@ insert into Users (FirstName,LastName,Login,Password) VALUES
 insert into Contacts (Name,Phone,Email,UserID) VALUES ('Bobby','(555)-444-6666','BobbyisGreat@Gmail.com',1);
 insert into Contacts (Name,Phone,Email,UserID) VALUES ('Jacky','(123)-896-1122','IdontLikeBobby@Gmail.com',1);
 insert into Contacts (Name,Phone,Email,UserID) VALUES ('nobody','(774)-0092-4572','YouShouldntSeeMe@Gmail.com',2);
+
+create user 'GenAccess' identified by 'GenAccess';
+grant all privileges on ContactManager.* to 'GenAccess'@'%';
+
+ALTER TABLE Users ADD CONSTRAINT unique_login UNIQUE (login);
