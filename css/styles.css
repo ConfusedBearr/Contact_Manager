@@ -1,7 +1,8 @@
 body 
 {
 	background: url(../images/gradientImage.jpg);
-	max-width: 800px
+	max-width: 800px;
+	margin: auto;
 }
 
 #title 
@@ -42,15 +43,15 @@ body
 .box {
 	opacity: 70%;
 	border-radius: 50px;
+	border: 1px solid black;
 }
 
 #loggedInDiv
 {
-	font-size: 30px;
+	font-size: 25px;
 	width: 70%;
 	margin-left: 15%;
 	padding: 25px;
-	background-color: #b2b2b2;
 }
 
 #accessUIDiv
@@ -96,6 +97,9 @@ body
 	font-size: 30px;
 }
 
+.inputContact{
+	font-size: 30px;
+}
 
 #loginName
 {
